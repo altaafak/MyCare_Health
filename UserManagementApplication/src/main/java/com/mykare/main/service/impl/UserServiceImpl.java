@@ -66,13 +66,5 @@ public class UserServiceImpl implements UserService {
 		return user.getName()+" is deleted successfully.";
 	}
 
-	@Override
-	public UserEntity findUserByEmail(String email) throws UserException {
-			
-		UserEntity user = userRepository.findByEmail(email).orElseThrow(() ->
-			new UserException("No user found with email: "+email)
-		);
-		return user;
-	}
-
+	
 }
